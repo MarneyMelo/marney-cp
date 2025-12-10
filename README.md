@@ -3,7 +3,7 @@
 Repositório destinado às minhas soluções de problemas do **Codeforces** e algoritmos de estudo.
 
 ## 📊 Meus Stats
-![Codeforces Stats](https://codeforces.com/profile/marney)
+[![Marney's Codeforces Stats](https://codeforces-readme-stats.vercel.app/api/card?username=marney&theme=radical)](https://codeforces.com/profile/marney)
 
 ## 🗂️ Estrutura
 - **Contests/**: Soluções de rounds que participei ao vivo.
