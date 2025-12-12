@@ -4,10 +4,31 @@
         {
             "label": "Compilar e Rodar (CP)",
             "type": "shell",
-            // Apenas compila com -DLOCAL e executa o binário
-            "command": "mkdir -p build && g++ -std=c++20 -DLOCAL -Wall -Wextra \"${file}\" -o \"${workspaceFolder}/build/${fileBasenameNoExtension}\" && \"${workspaceFolder}/build/${fileBasenameNoExtension}\"",
-            "group": { "kind": "build", "isDefault": true },
+            "group": { "kind": "build", "isDefault": true }, // Esta continua sendo a padrao
             "presentation": { "reveal": "always", "focus": true, "panel": "shared", "clear": true },
+            "options": { "cwd": "${workspaceFolder}" },
+            "command": "bash",
+            "args": [
+                "-c",
+                "mkdir -p build && g++ -std=c++20 -DLOCAL -Wall -Wextra '${file}' -o 'build/${fileBasenameNoExtension}' && echo '--- RODANDO ---' && 'build/${fileBasenameNoExtension}'"
+            ],
+            "problemMatcher": "$gcc"
+        },
+
+        {
+            "label": "Apenas Compilar (Debug)",
+            "type": "shell",
+            "group": "build",
+            "options": { "cwd": "${workspaceFolder}" },
+            "command": "/usr/bin/g++",
+            "args": [
+                "-g",
+                "-DLOCAL",
+                "-std=c++20",
+                "${file}",
+                "-o",
+                "${workspaceFolder}/build/${fileBasenameNoExtension}"
+            ],
             "problemMatcher": "$gcc"
         }
     ]
