@@ -3,7 +3,7 @@
 *.o
 *.out
 *.app
-./build/*
+build/
 # Ignorar arquivos de entrada/saída de teste locais
 input.txt
 output.txt
