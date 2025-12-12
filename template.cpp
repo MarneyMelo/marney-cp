@@ -11,13 +11,26 @@ void solve() {
 
 int main() {
     fast_io;
+
+    #ifdef LOCAL
+        FILE* arquivo = fopen("input.txt", "r");
+        
+        if (arquivo) {
+            fclose(arquivo);
+            freopen("input.txt", "r", stdin);
+        }
+
+        // output em arquivo
+        //freopen("output.txt", "w", stdout);
+    #endif
+
     int t;
-    cin >> t;
-    while(t--) {
-        solve();
+    if(cin >> t){
+        while(t--) {
+            solve();
+        }
+
+        //solve();
     }
-
-    //solve();
-
     return 0;
 }

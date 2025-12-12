@@ -5,9 +5,7 @@
 *.app
 build/
 # Ignorar arquivos de entrada/saída de teste locais
-input.txt
-output.txt
+*.txt
 
 # Ignorar pastas de IDE
-.vscode/
 .idea/
